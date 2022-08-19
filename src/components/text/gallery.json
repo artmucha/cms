@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_text_galleries",
+  "info": {
+    "displayName": "Gallery",
+    "icon": "images",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "text"
+    }
+  }
+}

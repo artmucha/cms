@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "platforms",
+  "info": {
+    "singularName": "platform",
+    "pluralName": "platforms",
+    "displayName": "Platform",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "platformId": {
+      "type": "biginteger",
+      "required": true,
+      "unique": true
+    },
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "yearEnd": {
+      "type": "biginteger"
+    },
+    "yearStart": {
+      "type": "biginteger"
+    },
+    "gamesCount": {
+      "type": "biginteger"
+    },
+    "games": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::game.game",
+      "mappedBy": "platforms"
+    }
+  }
+}
