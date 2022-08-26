@@ -34,10 +34,10 @@ const setImage = async({ image, game, field = "cover" }) => {
 };
 
 module.exports = {
-  '1 00 07 * * *': async () => {
+  '1 43 06 * * *': async () => {
     try {
       // do {
-        const { data } = await axios('https://api.rawg.io/api/games?platforms=7&page_size=10&key=73a2409ef4e5484792d8f865458dbd02');
+        const { data } = await axios('https://api.rawg.io/api/games?platforms=7&page_size=1&key=73a2409ef4e5484792d8f865458dbd02');
         
         data.results.forEach(async (game) => {
   
@@ -82,7 +82,7 @@ module.exports = {
             await strapi.db.query('api::game.game').create({
               data: {
                 gameId: game.id,
-                slug: game.slug,
+                slug: `${game.slug}-${platform.slug}`,
                 title: game.name,
                 released: game.released,
                 platform: platform,

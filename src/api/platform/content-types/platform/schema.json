@@ -23,15 +23,6 @@
     "slug": {
       "type": "string"
     },
-    "yearEnd": {
-      "type": "biginteger"
-    },
-    "yearStart": {
-      "type": "biginteger"
-    },
-    "gamesCount": {
-      "type": "biginteger"
-    },
     "games": {
       "type": "relation",
       "relation": "manyToMany",

@@ -28,7 +28,7 @@
       "inversedBy": "ratings"
     },
     "gameId": {
-      "type": "integer"
+      "type": "biginteger"
     }
   }
 }

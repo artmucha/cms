@@ -21,16 +21,17 @@
       "target": "api::game.game",
       "inversedBy": "reviews"
     },
-    "rating": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::rating.rating"
-    },
     "user": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
       "inversedBy": "reviews"
+    },
+    "rating": {
+      "type": "integer"
+    },
+    "gameId": {
+      "type": "biginteger"
     }
   }
 }
